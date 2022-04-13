@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --red: #514484;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #d4cfcf;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 70px;
+}
+.title h1 {
+  color: var(--red);
+}
+.draggable-list {
+  border: 1px solid #353434;
+  border-radius: 2px;
+}
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid #353434;
+}
+.draggable-list li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.draggable-list li.right .person-name {
+  color: #2cab58;
+}
+.draggable-list li.wrong .person-name {
+  color: #d22e2e;
+}
+.draggable-list li.over .person-name {
+  color: #eaeaea;
+}
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: var(--red);
+  color: #fff;
+  font-size: 18px;
+}
+.person-name {
+  color: #353434;
+}
+.draggable {
+  width: 200px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  flex: 1;
+}
+.draggable i {
+  color: var(--red);
+}
+.ckeck-btn {
+  padding: 15px 30px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: var(--red);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
